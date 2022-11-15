@@ -24,7 +24,6 @@ set scrolloff=5
 
 " plugins
 set ideamarks
-set easymotion
 set surround
 set argtextobj
 set NERDTree
@@ -49,10 +48,9 @@ set idearefactormode=keep
 " clear the highlighted search result
 nnoremap <leader>sc :nohlsearch<CR>
 
-" easymotion
-map <leader>f <Plug>(easymotion-s)
 " NERDTree
 nnoremap <leader>e :NERDTreeToggle<cr>
+
 " Insert mode shortcut
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -61,9 +59,10 @@ inoremap <C-l> <Right>
 inoremap <C-a> <Home>
 inoremap <C-e> <End>
 
-" Quit normal mode
-nnoremap <leader>q  :action CloseProject<CR>
-nnoremap <leader>Q  :qa!<CR>
+" Project Manage
+nnoremap <leader>pc  :action CloseProject<CR>
+nnoremap <leader>pr  :action ManageRecentProjects<CR>
+nnoremap <leader>pi  :action ImportProject<CR>
 
 " edit vimrc
 nnoremap <leader>ve :e ~/.ideavimrc<CR>
@@ -79,15 +78,19 @@ nnoremap ,b :action ToggleLineBreakpoint<CR>
 nnoremap ,v :action ViewBreakpoints<CR>
 nnoremap ,s :action Stop<CR>
 
+" idea action mapping
+nnoremap <leader>ga :action GotoAction<CR>
+nnoremap <leader>gc :action GotoClass<CR>
+nnoremap <leader>gf :action GotoFile<CR>
+nnoremap <leader>gt :action GotoTest<CR>
 
-nnoremap <Leader>ga :action GotoAction<CR>
-nnoremap <Leader>gc :action GotoClass<CR>
-nnoremap <Leader>gf :action GotoFile<CR>
-nnoremap <Leader>gs :action GotoSymbol<CR>
-nnoremap <Leader>gt :action GotoTest<CR>
-nnoremap <Leader>rf :action RenameFile<CR>
-nnoremap <Leader>gd :action GotoDeclaration<CR>
-nnoremap <Leader>gi :action GotoImplementation<CR>
-nnoremap <Leader>gf :action FileStructurePopup<CR>
-nnoremap <Leader>fu :action FindUsages<CR>
-nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <leader>gs :action GotoSuperMethod<CR>
+nnoremap <leader>gd :action GotoDeclaration<CR>
+nnoremap <leader>gi :action GotoImplementation<CR>
+
+nnoremap <leader>gf :action FileStructurePopup<CR>
+nnoremap <leader>re :action RenameElement<CR>
+nnoremap <leader>rf :action RenameFile<CR>
+nnoremap <leader>sw :action SurroundWith<CR>
+
+" refactor

@@ -5,6 +5,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'preservim/nerdtree' 
 " 主题插件(状态栏显示)
 Plug 'Bakudankun/qline.vim'
+Plug 'tpope/vim-surround'
+Plug 'Raimondi/delimitMate'
 call plug#end() 
 
 set nobackup
