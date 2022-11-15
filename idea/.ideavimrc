@@ -1,0 +1,93 @@
+"==========================================
+" Author:  frandy
+" Version: 0.1
+" Email: bycnsky@gmai.com
+" De: my ideavim config file
+"==========================================
+
+" set leader key
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" basic
+set clipboard+=unnamed
+set number
+set relativenumber
+set showmode
+
+" search
+set hlsearch
+set incsearch
+set smartcase
+set ignorecase
+set scrolloff=5
+
+" plugins
+set ideamarks
+set easymotion
+set surround
+set argtextobj
+set NERDTree
+set exchange
+set highlightedyank
+set textobj-entire
+set keep-english-in-normal-and-restore-in-insert
+set ReplaceWithRegister
+" basic key mapping
+nnoremap L $
+vnoremap H ^
+nnoremap H ^
+vnoremap L $
+nnoremap ; :
+
+inoremap jk <esc>
+
+""" Idea specific settings ------------------
+set ideajoin
+set idearefactormode=keep
+
+" clear the highlighted search result
+nnoremap <leader>sc :nohlsearch<CR>
+
+" easymotion
+map <leader>f <Plug>(easymotion-s)
+" NERDTree
+nnoremap <leader>e :NERDTreeToggle<cr>
+" Insert mode shortcut
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+
+" Quit normal mode
+nnoremap <leader>q  :action CloseProject<CR>
+nnoremap <leader>Q  :qa!<CR>
+
+" edit vimrc
+nnoremap <leader>ve :e ~/.ideavimrc<CR>
+nnoremap <leader>vw :w!<CR>
+nnoremap <leader>vs :source ~/.ideavimrc<CR>
+
+
+" run and debug
+nnoremap ,d :action Debug<CR>
+nnoremap ,r :action Run<CR>
+nnoremap ,c :action CompileDirty<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,v :action ViewBreakpoints<CR>
+nnoremap ,s :action Stop<CR>
+
+
+nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap <Leader>gc :action GotoClass<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap <Leader>gs :action GotoSymbol<CR>
+nnoremap <Leader>gt :action GotoTest<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gf :action FileStructurePopup<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+nnoremap <Leader>re :action RenameElement<CR>
