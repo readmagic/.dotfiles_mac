@@ -5,9 +5,32 @@
 " De: my ideavim config file
 "==========================================
 
+" idea shortcut
+"<Cmd-w>  close tab
+"<Cmd-Ctrl-[> left select tab
+"<Cmd-Ctrl-]> right select tab
+"<Cmd-Shift-u> switch letter big or small
+"<Cmd-Ctrl-k> select code move up
+"<Cmd-Ctrl-j> select code move down
+"<Cmd-k> method back
+"<Cmd-j> method forward
+
+"<Cmd-e>  open recent file
+"<Cmd-Enter> assistant intellect
+"<Cmd-[> navigate back
+"<Cmd-]> navigate forward
+"<Cmd-Ctrl-l> format code
+"<Cmd-Ctrl-o> clean import
+
+"<Ctrl-d> select down
+"<Ctrl-u> select up
+"<Ctrl-o> override method
+"<Ctrl-i> implement method
+
 " set leader key
 nnoremap <SPACE> <Nop>
 let mapleader = " "
+inoremap jk <esc>
 
 " basic
 set clipboard+=unnamed
@@ -15,23 +38,13 @@ set number
 set relativenumber
 set showmode
 
-" search
-set hlsearch
-set incsearch
-set smartcase
-set ignorecase
-set scrolloff=5
-
 " plugins
-set ideamarks
 set surround
 set argtextobj
-set NERDTree
-set exchange
-set highlightedyank
 set textobj-entire
-set keep-english-in-normal-and-restore-in-insert
-set ReplaceWithRegister
+set NERDTree
+set highlightedyank
+
 " basic key mapping
 nnoremap L $
 vnoremap H ^
@@ -39,18 +52,15 @@ nnoremap H ^
 vnoremap L $
 nnoremap ; :
 
-inoremap jk <esc>
 
 """ Idea specific settings ------------------
 set ideajoin
 set idearefactormode=keep
 
-" clear the highlighted search result
-nnoremap <leader>sc :nohlsearch<CR>
-
 " NERDTree
 nnoremap <leader>e :NERDTreeToggle<cr>
-
+nmap F <Action>(AceBackwardAction)
+nmap f <Action>(AceForwardAction)
 " Insert mode shortcut
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -63,11 +73,6 @@ inoremap <C-e> <End>
 nnoremap <leader>pc  :action CloseProject<CR>
 nnoremap <leader>pr  :action ManageRecentProjects<CR>
 nnoremap <leader>pi  :action ImportProject<CR>
-
-" edit vimrc
-nnoremap <leader>ve :e ~/.ideavimrc<CR>
-nnoremap <leader>vw :w!<CR>
-nnoremap <leader>vs :source ~/.ideavimrc<CR>
 
 
 " run and debug
@@ -84,13 +89,27 @@ nnoremap <leader>gc :action GotoClass<CR>
 nnoremap <leader>gf :action GotoFile<CR>
 nnoremap <leader>gt :action GotoTest<CR>
 
+" idea shortcut <Cmd-u>
 nnoremap <leader>gs :action GotoSuperMethod<CR>
+" idea shortcut <Cmd-b>
 nnoremap <leader>gd :action GotoDeclaration<CR>
+" idea shortcut<Cmd-Ctrl-b>
 nnoremap <leader>gi :action GotoImplementation<CR>
 
-nnoremap <leader>gf :action FileStructurePopup<CR>
 nnoremap <leader>re :action RenameElement<CR>
 nnoremap <leader>rf :action RenameFile<CR>
 nnoremap <leader>sw :action SurroundWith<CR>
+nnoremap <leader>fs :action FileStructurePopup<CR>
+
+" Splitting Windows
+nmap <leader>\ :vsplit<CR>
+nmap <leader>- :split<CR>
+nnoremap <leader>ns :action NextSplitter<CR>
+
+" edit vimrc
+nnoremap <leader>ve :e ~/.ideavimrc<CR>
+nnoremap <leader>vw :w!<CR>
+nnoremap <leader>vs :source ~/.ideavimrc<CR>
 
 " refactor
+

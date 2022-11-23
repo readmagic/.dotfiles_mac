@@ -10,6 +10,7 @@ Plug 'Raimondi/delimitMate'
 call plug#end() 
 
 set nobackup
+
 " 前缀指令🛂
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -19,9 +20,12 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>g :NERDTreeToggle<CR>
 nnoremap <Leader>f :NERDTreeFind<CR>
-noremap H ^
-noremap L $
 
+nnoremap L $
+vnoremap H ^
+nnoremap H ^
+vnoremap L $
+nnoremap ; :
 
 " 使用系统剪切版 -> Vim
 set clipboard=unnamedplus    
