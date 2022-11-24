@@ -7,14 +7,14 @@ Plug 'preservim/nerdtree'
 Plug 'Bakudankun/qline.vim'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
+Plug 'ybian/smartim'
+Plug 'machakann/vim-highlightedyank'
+
 call plug#end() 
 
 set nobackup
-
-" 前缀指令🛂
-nnoremap <SPACE> <Nop>
-let mapleader = " "
-inoremap jk <esc>
+set hlsearch
+let g:highlightedyank_highlight_duration = 300
 
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>w :w<CR>
@@ -34,4 +34,4 @@ set clipboard=unnamed
 colorscheme dracula
 set number
 set relativenumber
- 
+let g:smartim_default = 'com.apple.keylayout.ABC'
