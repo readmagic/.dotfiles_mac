@@ -35,8 +35,7 @@ set clipboard+=unnamed
 set number
 set relativenumber
 set showmode
-set keep-english-in-normal-and-restore-in-insert
-
+set keep-english-in-normal
 " plugins
 set surround
 set argtextobj
