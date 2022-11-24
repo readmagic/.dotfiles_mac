@@ -2,6 +2,8 @@ require("windows")
 require("autoReloadConfig")
 require("launchApp")
 require("ime")
-require("cmdQ")
+local cmdQ = hs.loadSpoon("HoldToQuit")
+cmdQ:init()
+cmdQ:start()
 
 
