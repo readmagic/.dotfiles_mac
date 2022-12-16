@@ -21,13 +21,13 @@
 "<Cmd-]> navigate forward
 "<Cmd-Ctrl-l> format code
 "<Cmd-Ctrl-o> clean import
-
+"<Cmd-n> create file
 "<Ctrl-j> select down
 "<Ctrl-k> select up
 "<Ctrl-o> override method
 "<Ctrl-i> implement method
-" basic
 
+" basic
 " set leader key
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -56,9 +56,9 @@ set ideajoin
 set idearefactormode=keep
 
 " NERDTree
-nnoremap <leader>e :NERDTreeToggle<cr>
-nmap F <Action>(AceBackwardAction)
-nmap f <Action>(AceForwardAction)
+nnoremap <leader>e :NERDTreeToggle<CR>
+
+
 " Insert mode shortcut
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
@@ -68,6 +68,7 @@ inoremap <C-a> <Home>
 inoremap <C-e> <End>
 
 " Project Manage
+nnoremap <leader>pn  :action NewProject<CR>
 nnoremap <leader>pc  :action CloseProject<CR>
 nnoremap <leader>pr  :action ManageRecentProjects<CR>
 nnoremap <leader>pi  :action ImportProject<CR>
@@ -82,16 +83,7 @@ nnoremap ,s :action Stop<CR>
 
 " idea action mapping
 nnoremap <leader>ga :action GotoAction<CR>
-nnoremap <leader>gc :action GotoClass<CR>
-nnoremap <leader>gf :action GotoFile<CR>
 nnoremap <leader>gt :action GotoTest<CR>
-
-" idea shortcut <Cmd-u>
-nnoremap <leader>gs :action GotoSuperMethod<CR>
-" idea shortcut <Cmd-b>
-nnoremap <leader>gd :action GotoDeclaration<CR>
-" idea shortcut<Cmd-Ctrl-b>
-nnoremap <leader>gi :action GotoImplementation<CR>
 
 nnoremap <leader>re :action RenameElement<CR>
 nnoremap <leader>rf :action RenameFile<CR>

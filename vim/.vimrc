@@ -3,8 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'as': 'dracula' }
 " 文件管理器插件
 Plug 'preservim/nerdtree' 
-" 主题插件(状态栏显示)
-Plug 'Bakudankun/qline.vim'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'ybian/smartim'
