@@ -11,4 +11,5 @@ end
 launchApp({"cmd"}, {key="2",app="Google Chrome"})
 launchApp({"cmd"}, {key="3",app="WeChat"})
 launchApp({"cmd"}, {key="4",app="IntelliJ IDEA"})
+launchApp({"cmd"}, {key="5",app="Visual Studio Code"})
 launchApp({"cmd","ctrl"}, {key="t",app="iTerm"})

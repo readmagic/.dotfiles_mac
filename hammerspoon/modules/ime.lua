@@ -14,6 +14,7 @@ local function set_app_input_method(app_name, set_input_method_function, event)
     end)
 end
 
+set_app_input_method('Code', English)
 set_app_input_method('WeChat', Chinese)
 set_app_input_method('iTerm2', English)
 set_app_input_method('IntelliJ IDEA', English)
