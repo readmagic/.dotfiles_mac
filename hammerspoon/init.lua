@@ -4,4 +4,5 @@ require("modules.launchApp")
 require("modules.ime")
 require("modules.cmdQ")
 require("modules.volume")
+require("modules.weather")
 
