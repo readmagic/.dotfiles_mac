@@ -1,5 +1,4 @@
 local urlApi = 'https://www.tianqiapi.com/api/?version=v1&appid=61372628&appsecret=7Yo6FT6Z'
---local urlApi = 'https://www.tianqiapi.com/api/?version=v1'
 local menubar = hs.menubar.new()
 local menuData = {}
 
@@ -33,13 +32,14 @@ function getWeather()
       menuData = {}
       for k, v in pairs(rawjson.data) do
          if k == 1 then
-            menubar:setTitle(v.tem)
-            titlestr = string.format("%s %s %s 当前🌡️%s， 最低🌡%s， 最高🌡️%s， 空气质量%s， %s", city,weaEmoji[v.wea_img],v.date, v.tem, v.tem2, v.tem1, v.air_level, v.wea)
+	    title = string.format("%s 🌡️%s",weaEmoji[v.wea_img],v.tem) 
+            menubar:setTitle(title)
+            titlestr = string.format("%s 最低🌡%s， 最高🌡️%s， %s" ,weaEmoji[v.wea_img], v.tem2, v.tem1, v.wea)
             item = { title = titlestr }
             table.insert(menuData, item)
             table.insert(menuData, {title = '-'})
          else
-            titlestr = string.format("%s %s %s %s 最低🌡️%s， 最高🌡️%s， %s", city, weaEmoji[v.wea_img],v.date, v.week, v.tem2, v.tem1, v.wea)
+            titlestr = string.format("%s %s 最低🌡️%s， 最高🌡️%s， %s", weaEmoji[v.wea_img], v.week, v.tem2, v.tem1, v.wea)
             item = { title = titlestr }
             table.insert(menuData, item)
          end
